@@ -1,0 +1,15 @@
+{
+  "loginDesc": "登录",
+  "registerDesc": "注册",
+  "bottomBtnText01": "友联",
+  "bottomBtnText02": "隐私说明",
+  "bottomBtnText03": "帮助",
+  "headBtnText01": "区块链浏览器",
+  "headBtnText02": "矿机商城",
+  "registerBtn": "报名",
+
+  "email": "邮箱",
+  "verifyCode": "验证码",
+  "password": "密码",
+  "userName": "用户名"
+}

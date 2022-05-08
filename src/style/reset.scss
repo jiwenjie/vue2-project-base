@@ -1,0 +1,320 @@
+/* 初始化CSS */
+@charset "utf-8";
+
+/* * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+} */
+
+/* 浏览器默认字体大小是 16px */
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: #333;
+  font-size: 62.5%;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif,
+    "Microsoft YaHei", "\5fae\8f6f\96c5\9ed1";
+  background: rgb(248, 247, 247);
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* body,
+button,
+input,
+select,
+textarea {
+  font-family: "Microsoft Yahei", "微软雅黑", "宋体", \5b8b\4f53, Tahoma, Arial,
+    Helvetica, STHeiti;
+} */
+
+/* dt, margin padding 默认值就是0 */
+/* li,  默认没有margin值padding值*/
+/* fieldset, 使用频率太低 */
+
+body,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form {
+  margin: 0;
+}
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+form {
+  position: relative;
+}
+
+em,
+i {
+  /*去掉斜体*/
+  font-style: normal;
+}
+
+b,
+strong {
+  /*去掉加粗*/
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+em {
+  font-style: normal;
+}
+
+small {
+  font-size: 12px;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+legend {
+  color: #000;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+a {
+  outline: 0;
+  text-decoration: none;
+}
+
+a:hover {
+  outline: 0;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*img标签要清除border。*/
+/*display设为block设置为块级元素，默认为display:inline;
+存在下边线多出4px状况,所以一般设为block*/
+img {
+  border: 0;
+  display: block;
+  -ms-interpolation-mode: bicubic;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+/* 单行文本省略，在指定宽度即可 */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 多行文本省略 */
+.multiple-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.error {
+  color: #f00;
+  font-size: 12px;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+/*清除浮动影响 和清除margintop塌陷 合在一起的写法*/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  /*兼容ie*/
+  zoom: 1;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.vm {
+  vertical-align: middle;
+}
+
+.reset-fs {
+  font-size: 0;
+}
+
+@media (min-width: 1200px) {
+}
+
+
+/**自定义滚动条**/
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  display: block;
+}
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement {
+  display: none;
+}
+::-webkit-scrollbar-track:vertical,
+::-webkit-scrollbar-track:horizontal,
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal,
+::-webkit-scrollbar-track:vertical,
+::-webkit-scrollbar-track:horizontal,
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal {
+  border-color: transparent;
+  border-style: solid;
+}
+::-webkit-scrollbar-track:vertical::-webkit-scrollbar-track:horizontal {
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb {
+  min-height: 28px;
+  padding-top: 100;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.35);
+}
+::-webkit-scrollbar-track:vertical,
+::-webkit-scrollbar-track:horizontal,
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal {
+  border-width: 0;
+}
+::-webkit-scrollbar-track:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-track:active {
+  background-color: rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.14),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.07);
+}
+.scrollbar-hover::-webkit-scrollbar,
+.scrollbar-hover::-webkit-scrollbar-button,
+.scrollbar-hover::-webkit-scrollbar-track,
+.scrollbar-hover::-webkit-scrollbar-thumb {
+  visibility: hidden;
+}
+.scrollbar-hover:hover::-webkit-scrollbar,
+.scrollbar-hover:hover::-webkit-scrollbar-button,
+.scrollbar-hover:hover::-webkit-scrollbar-track,
+.scrollbar-hover:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}

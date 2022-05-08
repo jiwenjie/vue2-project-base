@@ -1,0 +1,16 @@
+{
+  "loginDesc": "Login",
+  "registerDesc": "Register",
+  "bottomBtnText01": "youlian",
+  "bottomBtnText02": "secriptdesc",
+  "bottomBtnText03": "help",
+
+  "headBtnText01": "qukuailianl",
+  "headBtnText02": "kaungji",
+  "registerBtn": "Sign Up",
+
+  "email": "EMAIL",
+  "verifyCode": "verificationCode",
+  "password": "PASSWORD",
+  "userName": "USERNAME"
+}
